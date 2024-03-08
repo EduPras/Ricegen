@@ -2,7 +2,7 @@
 🌾  Diffusion Model applied to rice grains generation. 🌾
 
 <p align="center">
-    <img src='./rice-stable-diffusion.gif'/>
+    <img src='./rice-per-epoch.gif'/>
 </p>
 
 This is a simple academical project that aim to generate 
