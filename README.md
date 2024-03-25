@@ -10,6 +10,11 @@ rice grains images using an unconditional diffusion model from scratch technique
 Although being unconditional, the model is fully trained with similiar rice images, 
 so we can say that is *conditioned* to generate rice grains.
 
+> [!WARNING]
+> Most of the image labels are incorrected, a mistaken were made when generating them. 
+> The only image with right labels is [BS-64_E-120_IMGSIZE-16x16](5k-samples/CLASSES_BS-64_E-120_IMGSIZE-16x16_LR-0001.png). For the others, consider the first image label for all of them.
+> It'll be fixed as soon as possible.
+
 ## Dataset and pre-processing
 
 The chosen database was [Rice Image Dataset](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset),
@@ -33,14 +38,14 @@ The main goal is applying noise to the images using Markov Chain, this is the fo
 
 ### Parameters
 
-There were several tests with differents parameters values (batch size, image size, learning rate and number of epochs). You can see the results inside the [5k-samples](5k-samples). Among theses options, the image with the following parameters: [BS-64_E-120_IMGSIZE-16x16](5k-samples/CLASSES_BS-64_E-120_IMGSIZE-16x16.png) was the most similar to a real grain. The [BS-64_E-120_IMGSIZE-32x32_LR-00003](5k-samples/CLASSES_BS-64_E-120_IMGSIZE-16x16_LR-00003.png) (with learning rate = 0.0003) presented a good trail as well.
+There were several tests with differents parameters values (batch size, image size, learning rate and number of epochs). You can see the results inside the [5k-samples](5k-samples). Among theses options, the image with the following parameters: [BS-64_E-120_IMGSIZE-16x16](5k-samples/CLASSES_BS-64_E-120_IMGSIZE-16x16_LR-0001.png) was the most similar to a real grain. The [BS-64_E-120_IMGSIZE-32x32_LR-00003](5k-samples/CLASSES_BS-64_E-120_IMGSIZE-16x16_LR-00003.png) (with learning rate = 0.0003) presented a good trail as well.
 
 ## Results
 
 Altough being limited by the Colab runtime resources, great images were accomplished. The image below has the followings parameters: Batch size = 64, Epochs = 120, Resolution = 16x16 and Learning Rate = 0.0003.
 
 <p align="center">
-    <img src='./5k-samples/CLASSES_BS-64_E-120_IMGSIZE-16x16.png'/>
+    <img src='./5k-samples/CLASSES_BS-64_E-120_IMGSIZE-16x16_LR-0001.png'/>
 </p>
 
 When trying to increase the resolution, it's clearly seen that the model get instable and try to generate 
